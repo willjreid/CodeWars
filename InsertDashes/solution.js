@@ -1,12 +1,12 @@
 //Solution 1:
 
 function insertDash(num) {
-   let numString = num.toString()
-   let numArray = numString.split("");
-   numArray.forEach(if ((num[i]%2 === 1) && if (num[i+1]%2 === 1)) {
-     num[i] += '-';
-   }) ;
-   let numString2 = numArray.toString()
-   let numString3 = numString2.replace(/,/g, '' );
-   return numString3;
+  var numString = num.toString();
+  var numArray = numString.split('');
+  for (var i = 0; i < numArray.length; i++){
+    if (numArray[i] % 2 === 1 && numArray[i + 1] % 2 === 1) {
+      numArray[i] += '-';
+    }
+  }
+  return numArray.join('');
 }
